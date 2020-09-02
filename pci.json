@@ -1,0 +1,2175 @@
+{
+  "catalog": {
+    "uuid": "26a2a133-f395-432c-b2ad-77d23a23ca4e",
+    "metadata": {
+      "title": "NIST Special Publication 800-53 Revision 4: Security and Privacy Controls for Federal\n         Information Systems and Organizations",
+      "last-modified": "2020-05-29T23:29:27.272-04:00",
+      "version": "2015-01-22",
+      "oscal-version": "1.0.0-milestone3",
+      "properties": [
+        {
+          "name": "keywords",
+          "value": "Assurance, computer security, FISMA, Privacy Act, Risk Management Framework, security controls, security requirements"
+        }
+      ],
+      "links": [
+        {
+          "href": "#16b3b234-3406-44dc-8645-7da61b6e81f1",
+          "rel": "alternate",
+          "text": "NIST publication (PDF)"
+        },
+        {
+          "href": "#fb81fb1c-165e-43a4-8264-1dfd3182b630",
+          "rel": "canonical",
+          "text": "NIST publication via DOI lookup"
+        }
+      ],
+      "roles": [
+        {
+          "id": "creator",
+          "title": "Document creator"
+        },
+        {
+          "id": "contact",
+          "title": "Contact"
+        }
+      ],
+      "parties": [
+        {
+          "uuid": "93122cb0-95bc-4fdb-8b48-85ff60f9509b",
+          "type": "organization",
+          "party-name": "Joint Task Force, Transformation Initiative",
+          "addresses": [
+            {
+              "postal-address": [
+                "National Institute of Standards and Technology",
+                "Attn: Computer Security Division",
+                "Information Technology Laboratory",
+                "100 Bureau Drive (Mail Stop 8930)"
+              ],
+              "city": "Gaithersburg",
+              "state": "MD",
+              "postal-code": "20899-8930"
+            }
+          ],
+          "email-addresses": [
+            "sec-cert@nist.gov"
+          ]
+        }
+      ],
+      "responsible-parties": {
+        "creator": {
+          "party-uuids": [
+            "c6d77a50-e52e-4399-8a57-896d4807952f"
+          ]
+        },
+        "contact": {
+          "party-uuids": [
+            "c6d77a50-e52e-4399-8a57-896d4807952f"
+          ]
+        }
+      }
+    },
+    "groups": [
+      {
+        "id": "1",
+        "class": "goal",
+        "title": "Build and Maintain a Secure Network",
+        "controls": [
+          {
+            "id": "1",
+            "class": "requirement",
+            "title": "Install and maintain a firewall configuration to protect cardholder data",
+            "properties": [
+              {
+                "name": "label",
+                "value": "Requirement 1"
+              },
+              {
+                "name": "sort-id",
+                "value": "req-01"
+              }
+            ],
+            "controls": [
+              {
+                "id": "1.1",
+                "class": "control",
+                "parts": [
+                  {
+                    "id": "1.1",
+                    "name": "control",
+                    "prose": "Establish and implement firewall and router configuration standards that include the following:",
+                    "parts": [
+                      {
+                        "id": "1.1.1",
+                        "class": "subcontrol",
+                        "prose": "A formal process for approving and testing all network connections and changes to the firewall and router configurations."
+                      },
+                      {
+                        "id": "1.1.2",
+                        "class": "subcontrol",
+                        "prose": "Current network diagram that identifies all connections between the cardholder data environment and other networks, including any wireless networks."
+                      },
+                      {
+                        "id": "1.1.3",
+                        "class": "subcontrol",
+                        "prose": "Current diagram that shows all cardholder data flows across systems and networks"
+                      },
+                      {
+                        "id": "1.1.4",
+                        "class": "subcontrol",
+                        "prose": "Requirements for a firewall at each Internet connection and between any demilitarized zone (DMZ) and the internal network zone."
+                      },
+                      {
+                        "id": "1.1.5",
+                        "class": "subcontrol",
+                        "prose": "Description of groups, roles, and responsibilities for management of network components."
+                      },
+                      {
+                        "id": "1.1.6",
+                        "class": "subcontrol",
+                        "prose": "Documentation and business justification for use of all services, protocols, and ports allowed, including documentation of security features implemented for those protocols considered to be insecure."
+                      },
+                      {
+                        "id": "1.1.7",
+                        "class": "subcontrol",
+                        "prose": "Requirement to review firewall and router rule sets at least every six months."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "1.2",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "1.2",
+                    "class": "control",
+                    "prose": "Restrict inbound and outbound traffic to that which is necessary for the cardholder data environment, and specifically deny all other traffic.",
+                    "parts": [
+                      {
+                        "id": "1.2.1",
+                        "class": "subcontrol",
+                        "prose": "Restrict inbound and outbound traffic to that which is necessary for the cardholder data environment, and specifically deny all other traffic."
+                      },
+                      {
+                        "id": "1.2.2",
+                        "class": "subcontrol",
+                        "prose": "Secure and synchronize router configuration files."
+                      },
+                      {
+                        "id": "1.2.3",
+                        "class": "subcontrol",
+                        "prose": "Install perimeter firewalls between all wireless networks and the cardholder data environment, and configure these firewalls to deny or, if traffic is necessary for business purposes, permit only authorized traffic between the wireless environment and the cardholder data environment."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "1.3",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "1.3",
+                    "class": "control",
+                    "prose": "Prohibit direct public access between the Internet and any system component in the cardholder data environment.",
+                    "parts": [
+                      {
+                        "id": "1.3.1",
+                        "class": "subcontrol",
+                        "prose": "Implement a DMZ to limit inbound traffic to only system components that provide authorized publicly accessible services, protocols, and ports."
+                      },
+                      {
+                        "id": "1.3.2",
+                        "class": "subcontrol",
+                        "prose": "Limit inbound Internet traffic to IP addresses within the DMZ."
+                      },
+                      {
+                        "id": "1.3.3",
+                        "class": "subcontrol",
+                        "prose": "Implement anti-spoofing measures to detect and block forged source IP addresses from entering the network.\n \n(For example, block traffic originating from the Internet with an internal source address.)"
+                      },
+                      {
+                        "id": "1.3.4",
+                        "class": "subcontrol",
+                        "prose": "Do not allow unauthorized outbound traffic from the cardholder data environment to the Internet."
+                      },
+                      {
+                        "id": "1.3.5",
+                        "class": "subcontrol",
+                        "prose": "Permit only “established” connections into the network."
+                      },
+                      {
+                        "id": "1.3.6",
+                        "class": "subcontrol",
+                        "prose": "Place system components that store cardholder data (such as a database) in an internal network zone, segregated from the DMZ and other untrusted networks."
+                      },
+                      {
+                        "id": "1.3.7",
+                        "class": "subcontrol",
+                        "prose": "Do not disclose private IP addresses and routing information to unauthorized parties."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "1.4",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "1.4",
+                    "class": "control",
+                    "prose": "Install personal firewall software or equivalent functionality on any portable computing devices (including company and/or employee-owned) that connect to the Internet when outside the network (for example, laptops used by employees), and which are also used to access the CDE. Firewall (or equivalent) configurations include:\n\nSpecific configuration settings are defined.\nPersonal firewall (or equivalent functionality) is actively running.\nPersonal firewall (or equivalent functionality) is not alterable by users of the portable computing devices.",
+                    "parts": []
+                  }
+                ]
+              },
+              {
+                "id": "1.5",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "1.5",
+                    "class": "control",
+                    "prose": "Ensure that security policies and operational procedures for managing firewalls are documented, in use, and known to all affected parties.",
+                    "parts": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "2",
+            "class": "requirement",
+            "title": " Do not use vendor-supplied defaults for system passwords and other security parameters",
+            "properties": [
+              {
+                "name": "label",
+                "value": "Requirement 2"
+              },
+              {
+                "name": "sort-id",
+                "value": "req-02"
+              }
+            ],
+            "controls": [
+              {
+                "id": "2.1",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "2.1",
+                    "class": "control",
+                    "prose": "Always change vendor-supplied defaults and remove or disable unnecessary default accounts before installing a system on the network.\nThis applies to ALL default passwords, including but not limited to those used by operating systems, software that provides security services, application and system accounts, point-of-sale (POS) terminals, payment applications, Simple Network Management Protocol (SNMP) community strings, etc.",
+                    "parts": [
+                      {
+                        "id": "2.1.1",
+                        "class": "subcontrol",
+                        "prose": "For wireless environments connected to the cardholder data environment or transmitting cardholder data, change ALL wireless vendor defaults at installation, including but not limited to default wireless encryption keys, passwords, and SNMP community strings."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "2.2",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "2.2",
+                    "class": "control",
+                    "prose": "Develop configuration standards for all system components. Assure that these standards address all known security vulnerabilities and are consistent with industry-accepted system hardening standards.\n \nSources of industry-accepted system hardening standards may include, but are not limited to:\n\nCenter for Internet Security (CIS)\nInternational Organization for Standardization (ISO)\nSysAdmin Audit Network Security (SANS) Institute\nNational Institute of Standards Technology (NIST)",
+                    "parts": [
+                      {
+                        "id": "2.2.1",
+                        "class": "subcontrol",
+                        "prose": "Implement only one primary function per server to prevent functions that require different security levels from co-existing on the same server. (For example, web servers, database servers, and DNS should be implemented on separate servers.)"
+                      },
+                      {
+                        "id": "2.2.2",
+                        "class": "subcontrol",
+                        "prose": "Enable only necessary and secure services, protocols, daemons, etc. as required for the function of the system."
+                      },
+                      {
+                        "id": "2.2.3",
+                        "class": "subcontrol",
+                        "prose": "Implement additional security features for any required services, protocols, or daemons that are considered to be insecure."
+                      },
+                      {
+                        "id": "2.2.4",
+                        "class": "subcontrol",
+                        "prose": "Configure system security parameters to prevent misuse"
+                      },
+                      {
+                        "id": "2.2.5",
+                        "class": "subcontrol",
+                        "prose": "Remove all unnecessary functionality, such as scripts, drivers, features, subsystems, file systems, and unnecessary web servers."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "2.3",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "2.3",
+                    "class": "control",
+                    "prose": "Encrypt all non-console administrative access using strong cryptography.",
+                    "parts": []
+                  }
+                ]
+              },
+              {
+                "id": "2.4",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "2.4",
+                    "class": "control",
+                    "prose": "Maintain an inventory of system components that are in scope for PCI DSS.",
+                    "parts": []
+                  }
+                ]
+              },
+              {
+                "id": "2.5",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "2.5",
+                    "class": "control",
+                    "prose": "Ensure that security policies and operational procedures for managing vendor defaults and other security parameters are documented, in use, and known to all affected parties. ",
+                    "parts": []
+                  }
+                ]
+              },
+              {
+                "id": "2.6",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "2.6",
+                    "class": "control",
+                    "prose": "Shared hosting providers must protect each entity’s hosted environment and cardholder data. These providers must meet specific requirements as detailed in Appendix A: Additional PCI DSS Requirements for Shared Hosting Providers.",
+                    "parts": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "class": "goal",
+        "title": "Protect Cardholder Data",
+        "controls": [
+          {
+            "id": "3",
+            "class": "requirement",
+            "title": "Protect stored cardholder data",
+            "properties": [
+              {
+                "name": "label",
+                "value": "Requirement 3"
+              },
+              {
+                "name": "sort-id",
+                "value": "req-03"
+              }
+            ],
+            "controls": [
+              {
+                "id": "3.1",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "3.1",
+                    "class": "control",
+                    "prose": "Keep cardholder data storage to a minimum by implementing data retention and disposal policies, procedures and processes that include at least the following for all cardholder data (CHD) storage:\n\nLimiting data storage amount and retention time to that which is required for legal, regulatory, and/or business requirements\nSpecific retention requirements for cardholder data\nProcesses for secure deletion of data when no longer needed\nA quarterly process for identifying and securely deleting stored cardholder data that exceeds defined retention.",
+                    "parts": []
+                  }
+                ]
+              },
+              {
+                "id": "3.2",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "3.2",
+                    "class": "control",
+                    "prose": "Do not store sensitive authentication data after authorization (even if encrypted). If sensitive authentication data is received, render all data unrecoverable upon completion of the authorization process\n\nSensitive authentication data includes the data as cited in the following Requirements 3.2.1 through 3.2.3.",
+                    "parts": [
+                      {
+                        "id": "3.2.1",
+                        "class": "subcontrol",
+                        "prose": "Do not store the full contents of any track (from the magnetic stripe located on the back of a card, equivalent data contained on a chip, or elsewhere) after authorization. This data is alternatively called full track, track, track 1, track 2, and magnetic-stripe data."
+                      },
+                      {
+                        "id": "3.2.2",
+                        "class": "subcontrol",
+                        "prose": "Do not store the card-verification code or value (three-digit or four-digit number printed on the front or back of a payment card used to verify card-not-present transactions) after authorization."
+                      },
+                      {
+                        "id": "3.2.3",
+                        "class": "subcontrol",
+                        "prose": "Do not store the personal identification number (PIN) or the encrypted PIN block after authorization."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "3.3",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "3.3",
+                    "class": "control",
+                    "prose": "Mask PAN when displayed (the first six and last four digits are the maximum number of digits to be displayed), such that only personnel with a legitimate business need can see more than the first six/last four digits of the PAN.",
+                    "parts": []
+                  }
+                ]
+              },
+              {
+                "id": "3.4",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "3.4",
+                    "class": "control",
+                    "prose": "Render PAN unreadable anywhere it is stored (including on portable digital media, backup media, and in logs) by using any of the following approaches:\n\nOne-way hashes based on strong cryptography (hash must be of the entire PAN)\nTruncation (hashing cannot be used to replace the truncated segment of PAN)\nIndex tokens and pads (pads must be securely stored)\nStrong cryptography with associated key-management processes and procedures",
+                    "parts": [
+                      {
+                        "id": "3.4.1",
+                        "class": "subcontrol",
+                        "prose": "If disk encryption is used (rather than file- or column-level database encryption), logical access must be managed separately and independently of native operating system authentication and access control mechanisms (for example, by not using local user account databases or general network login credentials). Decryption keys must not be associated with user accounts."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "3.5",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "3.5",
+                    "class": "control",
+                    "prose": "Document and implement procedures to protect keys used to secure stored cardholder data against disclosure and misuse:",
+                    "parts": [
+                      {
+                        "id": "3.5.1",
+                        "class": "subcontrol",
+                        "prose": "Maintain a documented description of the cryptographic architecture that includes:\n\nDetails of all algorithms, protocols, and keys used for the protection of cardholder data, including key strength and expiry date\nDescription of the key usage for each key\nInventory of any HSMs and other SCDs used for key management"
+                      },
+                      {
+                        "id": "3.5.2",
+                        "class": "subcontrol",
+                        "prose": "Restrict access to cryptographic keys to the fewest number of custodians necessary."
+                      },
+                      {
+                        "id": "3.5.3",
+                        "class": "subcontrol",
+                        "prose": "Store secret and private keys used to encrypt/decrypt cardholder data in one (or more) of the following forms at all times:\n\nEncrypted with a key-encrypting key that is at least as strong as the data-encrypting key, and that is stored separately from the data-encrypting key\nWithin a secure cryptographic device (such as a hardware (host) security module (HSM) or PTS-approved point-of-interaction device)\nAs at least two full-length key components or key shares, in accordance with an industry-accepted method"
+                      },
+                      {
+                        "id": "3.5.4",
+                        "class": "subcontrol",
+                        "prose": "Store cryptographic keys in the fewest possible locations."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "3.6",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "3.6",
+                    "class": "control",
+                    "prose": "Fully document and implement all key-management processes and procedures for cryptographic keys used for encryption of cardholder data, including the following:",
+                    "parts": [
+                      {
+                        "id": "3.6.1",
+                        "class": "subcontrol",
+                        "prose": "Generation of strong cryptographic keys."
+                      },
+                      {
+                        "id": "3.6.2",
+                        "class": "subcontrol",
+                        "prose": "Secure cryptographic key distribution."
+                      },
+                      {
+                        "id": "3.6.3",
+                        "class": "subcontrol",
+                        "prose": "Secure cryptographic key storage."
+                      },
+                      {
+                        "id": "3.6.4",
+                        "class": "subcontrol",
+                        "prose": "Cryptographic key changes for keys that have reached the end of their cryptoperiod (for example, after a defined period of time has passed and/or after a certain amount of cipher-text has been produced by a given key), as defined by the associated application vendor or key owner, and based on industry best practices and guidelines (for example, NIST Special Publication 800-57)."
+                      },
+                      {
+                        "id": "3.6.5",
+                        "class": "subcontrol",
+                        "prose": "Retirement or replacement (for example, archiving, destruction, and/or revocation) of keys as deemed necessary when the integrity of the key has been weakened (for example, departure of an employee with knowledge of a clear-text key component), or keys are suspected of being compromised."
+                      },
+                      {
+                        "id": "3.6.6",
+                        "class": "subcontrol",
+                        "prose": "If manual clear-text cryptographic key-management operations are used, these operations must be managed using split knowledge and dual control."
+                      },
+                      {
+                        "id": "3.6.7",
+                        "class": "subcontrol",
+                        "prose": "Prevention of unauthorized substitution of cryptographic keys."
+                      },
+                      {
+                        "id": "3.6.8",
+                        "class": "subcontrol",
+                        "prose": "Requirement for cryptographic key custodians to formally acknowledge that they understand and accept their key-custodian responsibilities."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "3.7",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "3.7",
+                    "class": "control",
+                    "prose": "Ensure that security policies and operational procedures for protecting stored cardholder data are documented, in use, and known to all affected parties.",
+                    "parts": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "4",
+            "class": "requirement",
+            "title": "Encrypt transmission of cardholder data across open, public networks",
+            "properties": [
+              {
+                "name": "label",
+                "value": "Requirement 4"
+              },
+              {
+                "name": "sort-id",
+                "value": "req-04"
+              }
+            ],
+            "controls": [
+              {
+                "id": "4.1",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "4.1",
+                    "class": "control",
+                    "prose": "Use strong cryptography and security protocols to safeguard sensitive cardholder data during transmission over open, public networks, including the following:\n\nOnly trusted keys and certificates are accepted.\nThe protocol in use only supports secure versions or configurations.\nThe encryption strength is appropriate for the encryption methodology in use.",
+                    "parts": [
+                      {
+                        "id": "4.1.1",
+                        "class": "subcontrol",
+                        "prose": "Ensure wireless networks transmitting cardholder data or connected to the cardholder data environment, use industry best practices (e.g., IEEE 802.11i) to implement strong encryption for authentication and transmission."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "4.2",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "4.2",
+                    "class": "control",
+                    "prose": "Never send unprotected PANs by end-user messaging technologies (for example, e-mail, instant messaging, SMS, chat, etc.).",
+                    "parts": []
+                  }
+                ]
+              },
+              {
+                "id": "4.3",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "4.3",
+                    "class": "control",
+                    "prose": "Ensure that security policies and operational procedures for encrypting transmissions of cardholder data are documented, in use, and known to all affected parties.",
+                    "parts": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "class": "goal",
+        "title": "Maintain a Vulnerability Management Program",
+        "controls": [
+          {
+            "id": "5",
+            "class": "requirement",
+            "title": "Use and regularly update anti-virus software or programs",
+            "properties": [
+              {
+                "name": "label",
+                "value": "Requirement 5"
+              },
+              {
+                "name": "sort-id",
+                "value": "req-05"
+              }
+            ],
+            "controls": [
+              {
+                "id": "5.1",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "5.1",
+                    "class": "control",
+                    "prose": "Deploy anti-virus software on all systems commonly affected by malicious software (particularly personal computers and servers).",
+                    "parts": [
+                      {
+                        "id": "5.1.1",
+                        "class": "subcontrol",
+                        "prose": "Ensure that all anti-virus programs are capable of detecting, removing, and protecting against all known types of malicious software."
+                      },
+                      {
+                        "id": "5.1.2",
+                        "class": "subcontrol",
+                        "prose": "For systems considered to be not commonly affected by malicious software, perform periodic evaluations to identify and evaluate evolving malware threats in order to confirm whether such systems continue to not require anti-virus software."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "5.2",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "5.2",
+                    "class": "control",
+                    "prose": "Ensure that all anti-virus mechanisms are maintained as follows:\n\nAre kept current\nPerform periodic scans\nGenerate audit logs which are retained per PCI DSS Requirement 10.7",
+                    "parts": []
+                  }
+                ]
+              },
+              {
+                "id": "5.3",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "5.3",
+                    "class": "control",
+                    "prose": "Ensure that anti-virus mechanisms are actively running and cannot be disabled or altered by users, unless specifically authorized by management on a case-by-case basis for a limited time period.",
+                    "parts": []
+                  }
+                ]
+              },
+              {
+                "id": "5.4",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "5.4",
+                    "class": "control",
+                    "prose": "Ensure that security policies and operational procedures for protecting systems against malware are documented, in use, and known to all affected parties.",
+                    "parts": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "6",
+            "class": "requirement",
+            "title": "Develop and maintain secure systems and applications",
+            "properties": [
+              {
+                "name": "label",
+                "value": "Requirement 6"
+              },
+              {
+                "name": "sort-id",
+                "value": "req-06"
+              }
+            ],
+            "controls": [
+              {
+                "id": "6.1",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "6.1",
+                    "class": "control",
+                    "prose": "Establish a process to identify security vulnerabilities, using reputable outside sources for security vulnerability information, and assign a risk ranking (for example, as “high,” “medium,” or “low”) to newly discovered security vulnerabilities.",
+                    "parts": []
+                  }
+                ]
+              },
+              {
+                "id": "6.2",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "6.2",
+                    "class": "control",
+                    "prose": "Ensure that all system components and software are protected from known vulnerabilities by installing applicable vendor-supplied security patches. Install critical security patches within one month of release.",
+                    "parts": []
+                  }
+                ]
+              },
+              {
+                "id": "6.3",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "6.3",
+                    "class": "control",
+                    "prose": "\nDevelop internal and external software applications (including web-based administrative access to applications) securely, as follows:\n\nIn accordance with PCI DSS (for example, secure authentication and logging)\nBased on industry standards and/or best practices\nIncorporating information security throughout the software-development life cycle.",
+                    "parts": [
+                      {
+                        "id": "6.3.1",
+                        "class": "subcontrol",
+                        "prose": "Remove development, test and/or custom application accounts, user IDs, and passwords before applications become active or are released to customers."
+                      },
+                      {
+                        "id": "6.3.2",
+                        "class": "subcontrol",
+                        "prose": "\nReview custom code prior to release to production or customers in order to identify any potential coding vulnerability (using either manual or automated processes) to include at least the following:\n\nCode changes are reviewed by individuals other than the originating code author, and by individuals knowledgeable about code-review techniques and secure coding practices.\nCode reviews ensure code is developed according to secure coding guidelines\nAppropriate corrections are implemented prior to release.\nCode-review results are reviewed and approved by management prior to release."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "6.4",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "6.4",
+                    "class": "control",
+                    "prose": "Code-review results are reviewed and approved by management prior to release.",
+                    "parts": [
+                      {
+                        "id": "6.4.1",
+                        "class": "subcontrol",
+                        "prose": "Separate development/test environments from production environments, and enforce the separation with access controls."
+                      },
+                      {
+                        "id": "6.4.2",
+                        "class": "subcontrol",
+                        "prose": "Separation of duties between development/test and production environments."
+                      },
+                      {
+                        "id": "6.4.3",
+                        "class": "subcontrol",
+                        "prose": "Production data (live PANs) are not used for testing or development."
+                      },
+                      {
+                        "id": "6.4.4",
+                        "class": "subcontrol",
+                        "prose": "Removal of test data and accounts before the system becomes active / goes into production."
+                      },
+                      {
+                        "id": "6.4.5",
+                        "class": "subcontrol",
+                        "prose": "Change control procedures must include the following:"
+                      },
+                      {
+                        "id": "6.4.5.1",
+                        "class": "subcontrol",
+                        "prose": "Documentation of impact."
+                      },
+                      {
+                        "id": "6.4.5.2",
+                        "class": "subcontrol",
+                        "prose": "Documented change approval by authorized parties."
+                      },
+                      {
+                        "id": "6.4.5.3",
+                        "class": "subcontrol",
+                        "prose": "Functionality testing to verify that the change does not adversely impact the security of the system."
+                      },
+                      {
+                        "id": "6.4.5.4",
+                        "class": "subcontrol",
+                        "prose": "Back-out procedures."
+                      },
+                      {
+                        "id": "6.4.6",
+                        "class": "subcontrol",
+                        "prose": "Upon completion of a significant change, all relevant PCI DSS requirements must be implemented on all new or changed systems and networks, and documentation updated as applicable."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "6.5",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "6.5",
+                    "class": "control",
+                    "prose": "Address common coding vulnerabilities in software-development processes as follows:\n\nTrain developers at least annually in secure coding techniques, including how to avoid common coding vulnerabilities.\nDevelop applications based on secure coding guidelines.",
+                    "parts": [
+                      {
+                        "id": "6.5.1",
+                        "class": "subcontrol",
+                        "prose": "Injection flaws, particularly SQL injection. Also consider OS Command Injection, LDAP and XPath injection flaws as well as other injection flaws."
+                      },
+                      {
+                        "id": "6.5.2",
+                        "class": "subcontrol",
+                        "prose": "Buffer overflows."
+                      },
+                      {
+                        "id": "6.5.3",
+                        "class": "subcontrol",
+                        "prose": "Insecure cryptographic storage."
+                      },
+                      {
+                        "id": "6.5.4",
+                        "class": "subcontrol",
+                        "prose": "Insecure communications."
+                      },
+                      {
+                        "id": "6.5.5",
+                        "class": "subcontrol",
+                        "prose": "Improper error handling."
+                      },
+                      {
+                        "id": "6.5.6",
+                        "class": "subcontrol",
+                        "prose": "All \"high risk\" vulnerabilities identified in the vulnerability identification process (as defined in PCI DSS Requirement 6.1)."
+                      },
+                      {
+                        "id": "6.5.7",
+                        "class": "subcontrol",
+                        "prose": "Cross-site scripting (XSS)."
+                      },
+                      {
+                        "id": "6.5.8",
+                        "class": "subcontrol",
+                        "prose": "Improper access control (such as insecure direct object references, failure to restrict URL access, directory traversal, and failure to restrict user access to functions)."
+                      },
+                      {
+                        "id": "6.5.9",
+                        "class": "subcontrol",
+                        "prose": "Cross-site request forgery (CRSF)."
+                      },
+                      {
+                        "id": "6.5.10",
+                        "class": "subcontrol",
+                        "prose": "Broken authentication and session management"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "6.6",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "6.6",
+                    "class": "control",
+                    "prose": "For public-facing web applications, address new threats and vulnerabilities on an ongoing basis and ensure these applications are protected against known attacks by either of the following methods:\n\nReviewing public-facing web applications via manual or automated application vulnerability security assessment tools or methods, at least annually and after any changes\nInstalling an automated technical solution that detects and prevents web-based attacks (for example, a web-application firewall) in front of public-facing web applications, to continually check all traffic",
+                    "parts": []
+                  }
+                ]
+              },
+              {
+                "id": "6.7",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "6.7",
+                    "class": "control",
+                    "prose": "Ensure that security policies and operational procedures for developing and maintaining secure systems and applications are documented, in use, and known to all affected parties.",
+                    "parts": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "class": "goal",
+        "title": "Implement Strong Access Control Measures",
+        "controls": [
+          {
+            "id": "7",
+            "class": "requirement",
+            "title": "Restrict access to cardholder data by business need-to-know",
+            "properties": [
+              {
+                "name": "label",
+                "value": "Requirement 7"
+              },
+              {
+                "name": "sort-id",
+                "value": "req-07"
+              }
+            ],
+            "controls": [
+              {
+                "id": "7.1",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "7.1",
+                    "class": "control",
+                    "prose": "Limit access to system components and cardholder data to only those individuals whose job requires such access.",
+                    "parts": [
+                      {
+                        "id": "7.1.1",
+                        "class": "subcontrol",
+                        "prose": "Define access needs for each role, including:\n\nSystem components and data resources that each role needs to access for their job function\nLevel of privilege required (for example, user, administrator, etc.) for accessing resources."
+                      },
+                      {
+                        "id": "7.1.2",
+                        "class": "subcontrol",
+                        "prose": "Restrict access rights to privileged user IDs to least privileges necessary to perform job responsibilities."
+                      },
+                      {
+                        "id": "7.1.3",
+                        "class": "subcontrol",
+                        "prose": "Assign access based on individual personnel’s job classification and function."
+                      },
+                      {
+                        "id": "7.1.4",
+                        "class": "subcontrol",
+                        "prose": "Require documented approval by authorized parties specifying required privileges."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "7.2",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "7.2",
+                    "class": "control",
+                    "prose": "Establish an access control system(s) for systems components that restricts access based on a user’s need to know, and is set to “deny all” unless specifically allowed.\nThis access control system(s) must include the following:",
+                    "parts": [
+                      {
+                        "id": "7.2.1",
+                        "class": "subcontrol",
+                        "prose": "Coverage of all system components."
+                      },
+                      {
+                        "id": "7.2.2",
+                        "class": "subcontrol",
+                        "prose": "Assignment of privileges to individuals based on job classification and function."
+                      },
+                      {
+                        "id": "7.2.3",
+                        "class": "subcontrol",
+                        "prose": "Default “deny-all” setting."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "7.3",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "7.3",
+                    "class": "control",
+                    "prose": "Ensure that security policies and operational procedures for restricting access to cardholder data are documented, in use, and known to all affected parties.",
+                    "parts": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "8",
+            "class": "requirement",
+            "title": " Assign a unique ID to each person with computer access",
+            "properties": [
+              {
+                "name": "label",
+                "value": "Requirement 8"
+              },
+              {
+                "name": "sort-id",
+                "value": "req-08"
+              }
+            ],
+            "controls": [
+              {
+                "id": "8.1",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "8.1",
+                    "class": "control",
+                    "prose": "Define and implement policies and procedures to ensure proper user identification management for non-consumer users and administrators on all system components as follows:",
+                    "parts": [
+                      {
+                        "id": "8.1.1",
+                        "class": "subcontrol",
+                        "prose": "Assign all users a unique ID before allowing them to access system components or cardholder data."
+                      },
+                      {
+                        "id": "8.1.2",
+                        "class": "subcontrol",
+                        "prose": "Control addition, deletion, and modification of user IDs, credentials, and other identifier objects."
+                      },
+                      {
+                        "id": "8.1.3",
+                        "class": "subcontrol",
+                        "prose": "Immediately revoke access for any terminated users."
+                      },
+                      {
+                        "id": "8.1.4",
+                        "class": "subcontrol",
+                        "prose": "Remove/disable inactive user accounts within 90 days."
+                      },
+                      {
+                        "id": "8.1.5",
+                        "class": "subcontrol",
+                        "prose": "Manage IDs used by third parties to access, support, or maintain system components via remote access as follows:\n\nEnabled only during the time period needed and disabled when not in use.\nMonitored when in use."
+                      },
+                      {
+                        "id": "8.1.6",
+                        "class": "subcontrol",
+                        "prose": "Limit repeated access attempts by locking out the user ID after not more than six attempts."
+                      },
+                      {
+                        "id": "8.1.7",
+                        "class": "subcontrol",
+                        "prose": "Set the lockout duration to a minimum of 30 minutes or until an administrator enables the user ID."
+                      },
+                      {
+                        "id": "8.1.8",
+                        "class": "subcontrol",
+                        "prose": "If a session has been idle for more than 15 minutes, require the user to re-authenticate to re-activate the terminal or session."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "8.2",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "8.2",
+                    "class": "control",
+                    "prose": "In addition to assigning a unique ID, ensure proper user-authentication management for non-consumer users and administrators on all system components by employing at least one of the following methods to authenticate all users:\n\nSomething you know, such as a password or passphrase\nSomething you have, such as a token device or smart card\nSomething you are, such as a biometric",
+                    "parts": [
+                      {
+                        "id": "8.2.1",
+                        "class": "subcontrol",
+                        "prose": "Using strong cryptography, render all authentication credentials unreadable (such as passwords/phrases) during transmission and storage on all system components."
+                      },
+                      {
+                        "id": "8.2.2",
+                        "class": "subcontrol",
+                        "prose": "Verify user identity before modifying any authentication credential – for example, performing password resets, provisioning new tokens, or generating new keys."
+                      },
+                      {
+                        "id": "8.2.3",
+                        "class": "subcontrol",
+                        "prose": "Passwords/passphrases must meet the following:\n\nRequire a minimum length of at least seven characters.\nContain both numeric and alphabetic characters.\n \nAlternatively, the passwords/passphrases must have complexity and strength at least equivalent to the parameters specified above.\n"
+                      },
+                      {
+                        "id": "8.2.4",
+                        "class": "subcontrol",
+                        "prose": "Change user passwords/passphrases at least once every 90 days."
+                      },
+                      {
+                        "id": "8.2.5",
+                        "class": "subcontrol",
+                        "prose": "Do not allow an individual to submit a new password/phrase that is the same as any of the last four passwords/phrases he or she has used."
+                      },
+                      {
+                        "id": "8.2.6",
+                        "class": "subcontrol",
+                        "prose": "Set passwords/phrases for first-time use and upon reset to a unique value for each user, and change immediately after the first use."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "8.3",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "8.3",
+                    "class": "control",
+                    "prose": "Secure all individual non-console administrative access and all remote access to the CDE using multi-factor authentication.",
+                    "parts": [
+                      {
+                        "id": "8.3.1",
+                        "class": "subcontrol",
+                        "prose": "Incorporate multi-factor authentication for all non-console access into the CDE for personnel with administrative access."
+                      },
+                      {
+                        "id": "8.3.2",
+                        "class": "subcontrol",
+                        "prose": "Incorporate multi-factor authentication for all remote network access (both user and administrator, and including third-party access for support or maintenance) originating from outside the entity’s network."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "8.4",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "8.4",
+                    "class": "control",
+                    "prose": "Document and communicate authentication policies and procedures to all users including:\n\nGuidance on selecting strong authentication credentials\nGuidance for how users should protect their authentication credentials\nInstructions not to reuse previously used passwords\nInstructions to change passwords if there is any suspicion the password could be compromised.",
+                    "parts": []
+                  }
+                ]
+              },
+              {
+                "id": "8.5",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "8.5",
+                    "class": "control",
+                    "prose": "Do not use group, shared, or generic IDs, passwords, or other authentication methods as follows:\n\nGeneric user IDs are disabled or removed.\nShared user IDs do not exist for system administration and other critical functions.\nShared and generic user IDs are not used to administer any system components.",
+                    "parts": [
+                      {
+                        "id": "8.5.1",
+                        "class": "subcontrol",
+                        "prose": "Additional requirement for service providers only: Service providers with remote access to customer premises (for example, for support of POS systems or servers) must use a unique authentication credential (such as a password/phrase) for each customer."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "8.6",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "8.6",
+                    "class": "control",
+                    "prose": "Where other authentication mechanisms are used (for example, physical or logical security tokens, smart cards, certificates, etc.), use of these mechanisms must be assigned as follows:\n\nAuthentication mechanisms must be assigned to an individual account and not shared among multiple accounts.\nPhysical and/or logical controls must be in place to ensure only the intended account can use that mechanism to gain access.",
+                    "parts": []
+                  }
+                ]
+              },
+              {
+                "id": "8.7",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "8.7",
+                    "class": "control",
+                    "prose": "All access to any database containing cardholder data (including access by applications, administrators, and all other users) is restricted as follows:\n\nAll user access to, user queries of, and user actions on databases are through programmatic methods.\nOnly database administrators have the ability to directly access or query databases.\nApplication IDs for database applications can only be used by the applications (and not by individual users or other non-application processes). ",
+                    "parts": []
+                  }
+                ]
+              },
+              {
+                "id": "8.8",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "8.8",
+                    "class": "control",
+                    "prose": "Ensure that security policies and operational procedures for identification and authentication are documented, in use, and known to all affected parties.",
+                    "parts": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "9",
+            "class": "requirement",
+            "title": "Restrict physical access to cardholder data",
+            "properties": [
+              {
+                "name": "label",
+                "value": "Requirement 9"
+              },
+              {
+                "name": "sort-id",
+                "value": "req-09"
+              }
+            ],
+            "controls": [
+              {
+                "id": "9.1",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "9.1",
+                    "class": "control",
+                    "prose": "Use appropriate facility entry controls to limit and monitor physical access to systems in the cardholder data environment.",
+                    "parts": [
+                      {
+                        "id": "9.1.1",
+                        "class": "subcontrol",
+                        "prose": "Use video cameras or access control mechanisms (or both) to monitor individual physical access to sensitive areas. Review collected data and correlate with other entries. Store for at least three months, unless otherwise restricted by law."
+                      },
+                      {
+                        "id": "9.1.2",
+                        "class": "subcontrol",
+                        "prose": "Implement physical and/or logical controls to restrict access to publicly accessible network jacks."
+                      },
+                      {
+                        "id": "9.1.3",
+                        "class": "subcontrol",
+                        "prose": "Restrict physical access to wireless access points, gateways, handheld devices, networking/communications hardware, and telecommunications lines."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "9.2",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "9.2",
+                    "class": "control",
+                    "prose": "Develop procedures to easily distinguish between onsite personnel and visitors, to include:\n\nIdentifying onsite personnel and visitors (for example, assigning badges)\nChanges to access requirements\nRevoking or terminating onsite personnel and expired visitor identification (such as ID badges).",
+                    "parts": []
+                  }
+                ]
+              },
+              {
+                "id": "9.3",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "9.3",
+                    "class": "control",
+                    "prose": "Control physical access for onsite personnel to sensitive areas as follows:\n\nAccess must be authorized and based on individual job function.\nAccess is revoked immediately upon termination, and all physical access mechanisms, such as keys, access cards, etc., are returned or disabled.",
+                    "parts": []
+                  }
+                ]
+              },
+              {
+                "id": "9.4",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "9.4",
+                    "class": "control",
+                    "prose": "Implement procedures to identify and authorize visitors.\nProcedures should include the following:",
+                    "parts": [
+                      {
+                        "id": "9.4.1",
+                        "class": "subcontrol",
+                        "prose": "Visitors are authorized before entering, and escorted at all times within areas where cardholder data is processed or maintained."
+                      },
+                      {
+                        "id": "9.4.2",
+                        "class": "subcontrol",
+                        "prose": "Visitors are identified and given a badge or other identification that expires and that visibly distinguishes the visitors from onsite personnel."
+                      },
+                      {
+                        "id": "9.4.3",
+                        "class": "subcontrol",
+                        "prose": "Visitors are asked to surrender the badge or identification before leaving the facility or at the date of expiration."
+                      },
+                      {
+                        "id": "9.4.4",
+                        "class": "subcontrol",
+                        "prose": "A visitor log is used to maintain a physical audit trail of visitor activity to the facility as well as computer rooms and datacenters where cardholder data is stored or transmitted.\n \nDocument the visitor’s name, the firm represented, and the onsite personnel authorizing physical access on the log.\n \nRetain this log for a minimum of three months, unless otherwise restricted by law."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "9.5",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "9.5",
+                    "class": "control",
+                    "prose": "Physically secure all media.",
+                    "parts": [
+                      {
+                        "id": "9.5.1",
+                        "class": "subcontrol",
+                        "prose": "Store media back-ups in a secure location, preferably an off-site facility, such as an alternate or backup site, or a commercial storage facility. Review the location’s security at least annually."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "9.6",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "9.6",
+                    "class": "control",
+                    "prose": "Maintain strict control over the internal or external distribution of any kind of media, including the following:",
+                    "parts": [
+                      {
+                        "id": "9.6.1",
+                        "class": "subcontrol",
+                        "prose": "Classify media so the sensitivity of the data can be determined."
+                      },
+                      {
+                        "id": "9.6.2",
+                        "class": "subcontrol",
+                        "prose": "Send the media by secured courier or other delivery method that can be accurately tracked."
+                      },
+                      {
+                        "id": "9.6.3",
+                        "class": "subcontrol",
+                        "prose": "Ensure management approves any and all media that is moved from a secured area (especially when media is distributed to individuals)."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "9.7",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "9.7",
+                    "class": "control",
+                    "prose": "Maintain strict control over the storage and accessibility of media.",
+                    "parts": [
+                      {
+                        "id": "9.7.1",
+                        "class": "subcontrol",
+                        "prose": "Properly maintain inventory logs of all media and conduct media inventories at least annually."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "9.8",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "9.8",
+                    "class": "control",
+                    "prose": "Destroy media when it is no longer needed for business or legal reasons as follows:",
+                    "parts": [
+                      {
+                        "id": "9.8.1",
+                        "class": "subcontrol",
+                        "prose": "Shred, incinerate, or pulp hardcopy materials so that cardholder data cannot be reconstructed. Secure storage containers used for materials that are to be destroyed."
+                      },
+                      {
+                        "id": "9.8.2",
+                        "class": "subcontrol",
+                        "prose": "Render cardholder data on electronic media unrecoverable so that cardholder data cannot be reconstructed."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "9.9",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "9.9",
+                    "class": "control",
+                    "prose": "Protect devices that capture payment card data via direct physical interaction with the card from tampering and substitution.",
+                    "parts": [
+                      {
+                        "id": "9.9.1",
+                        "class": "subcontrol",
+                        "prose": "Maintain an up-to-date list of devices. The list should include the following:\n\nMake, model of device\nLocation of device (for example, the address of the site or facility where the device is located)\nDevice serial number or other method of unique identification."
+                      },
+                      {
+                        "id": "9.9.2",
+                        "class": "subcontrol",
+                        "prose": "Periodically inspect device surfaces to detect tampering (for example, addition of card skimmers to devices), or substitution (for example, by checking the serial number or other device characteristics to verify it has not been swapped with a fraudulent device)."
+                      },
+                      {
+                        "id": "9.9.3",
+                        "class": "subcontrol",
+                        "prose": "Provide training for personnel to be aware of attempted tampering or replacement of devices. Training should include the following:\n\nVerify the identity of any third-party persons claiming to be repair or maintenance personnel, prior to granting them access to modify or troubleshoot devices.\nDo not install, replace, or return devices without verification.\nBe aware of suspicious behavior around devices (for example, attempts by unknown persons to unplug or open devices).\nReport suspicious behavior and indications of device tampering or substitution to appropriate personnel (for example, to a manager or security officer)."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "9.10",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "9.10",
+                    "class": "control",
+                    "prose": "Ensure that security policies and operational procedures for restricting physical access to cardholder data are documented, in use, and known to all affected parties.",
+                    "parts": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "class": "goal",
+        "title": "Regularly Monitor and Test Networks",
+        "controls": [
+          {
+            "id": "10",
+            "class": "requirement",
+            "title": "Track and monitor all access to network resources and cardholder data",
+            "properties": [
+              {
+                "name": "label",
+                "value": "Requirement 10"
+              },
+              {
+                "name": "sort-id",
+                "value": "req-10"
+              }
+            ],
+            "controls": [
+              {
+                "id": "10.1",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "10.1",
+                    "class": "control",
+                    "prose": "Implement audit trails to link all access to system components to each individual user.",
+                    "parts": []
+                  }
+                ]
+              },
+              {
+                "id": "10.2",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "10.2",
+                    "class": "control",
+                    "prose": "Implement automated audit trails for all system components to reconstruct the following events:",
+                    "parts": [
+                      {
+                        "id": "10.2.1",
+                        "class": "subcontrol",
+                        "prose": "All individual accesses to cardholder data."
+                      },
+                      {
+                        "id": "10.2.2",
+                        "class": "subcontrol",
+                        "prose": "All actions taken by any individual with root or administrative privileges."
+                      },
+                      {
+                        "id": "10.2.3",
+                        "class": "subcontrol",
+                        "prose": "Access to all audit trails."
+                      },
+                      {
+                        "id": "10.2.4",
+                        "class": "subcontrol",
+                        "prose": "Invalid logical access attempts."
+                      },
+                      {
+                        "id": "10.2.5",
+                        "class": "subcontrol",
+                        "prose": "Use of and changes to identification and authentication mechanisms - including but not limited to creation of new accounts and elevation of privileges - and all changes, additions, or deletions to accounts with root or administrative privileges."
+                      },
+                      {
+                        "id": "10.2.6",
+                        "class": "subcontrol",
+                        "prose": "Initialization, stopping, or pausing of the audit logs."
+                      },
+                      {
+                        "id": "10.2.7",
+                        "class": "subcontrol",
+                        "prose": "Creation and deletion of system-level objects."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "10.3",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "10.3",
+                    "class": "control",
+                    "prose": "Record at least the following audit trail entries for all system components for each event:",
+                    "parts": [
+                      {
+                        "id": "10.3.1",
+                        "class": "subcontrol",
+                        "prose": "User identification."
+                      },
+                      {
+                        "id": "10.3.2",
+                        "class": "subcontrol",
+                        "prose": "Type of event."
+                      },
+                      {
+                        "id": "10.3.3",
+                        "class": "subcontrol",
+                        "prose": "Date and time."
+                      },
+                      {
+                        "id": "10.3.4",
+                        "class": "subcontrol",
+                        "prose": "Success or failure indication."
+                      },
+                      {
+                        "id": "10.3.5",
+                        "class": "subcontrol",
+                        "prose": "Origination of event."
+                      },
+                      {
+                        "id": "10.3.6",
+                        "class": "subcontrol",
+                        "prose": "Identity or name of affected data, system component, or resource."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "10.4",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "10.4",
+                    "class": "control",
+                    "prose": "Using time-synchronization technology, synchronize all critical system clocks and times and ensure that the following is implemented for acquiring, distributing, and storing time.",
+                    "parts": [
+                      {
+                        "id": "10.4.1",
+                        "class": "subcontrol",
+                        "prose": "Critical systems have the correct and consistent time."
+                      },
+                      {
+                        "id": "10.4.2",
+                        "class": "subcontrol",
+                        "prose": "Time data is protected."
+                      },
+                      {
+                        "id": "10.4.3",
+                        "class": "subcontrol",
+                        "prose": "Time settings are received from industry-accepted time sources."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "10.5",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "10.5",
+                    "class": "control",
+                    "prose": "Secure audit trails so they cannot be altered.",
+                    "parts": [
+                      {
+                        "id": "10.5.1",
+                        "class": "subcontrol",
+                        "prose": "Limit viewing of audit trails to those with a job-related need."
+                      },
+                      {
+                        "id": "10.5.2",
+                        "class": "subcontrol",
+                        "prose": "Protect audit trail files from unauthorized modifications."
+                      },
+                      {
+                        "id": "10.5.3",
+                        "class": "subcontrol",
+                        "prose": "Promptly back up audit trail files to a centralized log server or media that is difficult to alter."
+                      },
+                      {
+                        "id": "10.5.4",
+                        "class": "subcontrol",
+                        "prose": "Write logs for external-facing technologies onto a secure, centralized, internal log server or media device."
+                      },
+                      {
+                        "id": "10.5.5",
+                        "class": "subcontrol",
+                        "prose": "Use file-integrity monitoring or change detection software on logs to ensure that existing log data cannot be changed without generating alerts (although new data being added should not cause an alert)."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "10.6",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "10.6",
+                    "class": "control",
+                    "prose": "Review logs for all system components to identify anomalies or suspicious activity.",
+                    "parts": [
+                      {
+                        "id": "10.6.1",
+                        "class": "subcontrol",
+                        "prose": "Review the following at least daily:\n\nAll security events\nLogs of all system components that store, process, or transmit CHD and/or SAD\nLogs of all critical system components\nLogs of all servers and system components that perform security functions (for example, firewalls, intrusion-detection system/intrusion-prevention systems (IDS/IPS), authentication servers, e-commerce redirection servers, etc.)."
+                      },
+                      {
+                        "id": "10.6.2",
+                        "class": "subcontrol",
+                        "prose": "Review logs of all other system components periodically based on the organization’s policies and risk management strategy, as determined by the organization’s annual risk assessment."
+                      },
+                      {
+                        "id": "10.6.3",
+                        "class": "subcontrol",
+                        "prose": "Follow up exceptions and anomalies identified during the review process."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "10.7",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "10.7",
+                    "class": "control",
+                    "prose": "Retain audit trail history for at least one year, with a minimum of three months immediately available for analysis (for example, online, archived, or restorable from backup).",
+                    "parts": []
+                  }
+                ]
+              },
+              {
+                "id": "10.8",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "10.8",
+                    "class": "control",
+                    "prose": "Implement a process for the timely detection and reporting of failures of critical security control systems, including but not limited to failure of:\n\nFirewalls\nIDS/IPS\nFIM\nAnti-virus\nPhysical access controls\nLogical access controls\nAudit logging mechanisms\nSegmentation controls (if used)",
+                    "parts": [
+                      {
+                        "id": "10.8.1",
+                        "class": "subcontrol",
+                        "prose": "Respond to failures of any critical security controls in a timely manner. Processes for responding to failures in security controls must include:\n\nRestoring security functions\nIdentifying and documenting the duration (date and time start to end) of the security failure\nIdentifying and documenting cause(s) of failure, including root cause, and documenting remediation required to address root cause\nIdentifying and addressing any security issues that arose during the failure\nPerforming a risk assessment to determine whether further actions are required as a result of the security failure\nImplementing controls to prevent cause of failure from reoccurring\nResuming"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "10.9",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "10.9",
+                    "class": "control",
+                    "prose": "Ensure that security policies and operational procedures for monitoring all access to network resources and cardholder data are documented, in use, and known to all affected parties.",
+                    "parts": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "11",
+            "class": "requirement",
+            "title": "Regularly test security systems and processes",
+            "properties": [
+              {
+                "name": "label",
+                "value": "Requirement 11"
+              },
+              {
+                "name": "sort-id",
+                "value": "req-11"
+              }
+            ],
+            "controls": [
+              {
+                "id": "11.1",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "11.1",
+                    "class": "control",
+                    "prose": "Implement processes to test for the presence of wireless access points (802.11), and detect and identify all authorized and unauthorized wireless access points on a quarterly basis.",
+                    "parts": [
+                      {
+                        "id": "11.1.1",
+                        "class": "subcontrol",
+                        "prose": "Maintain an inventory of authorized wireless access points including a documented business justification."
+                      },
+                      {
+                        "id": "11.1.2",
+                        "class": "subcontrol",
+                        "prose": "Implement incident response procedures in the event unauthorized wireless access points are detected."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "11.2",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "11.2",
+                    "class": "control",
+                    "prose": "Run internal and external network vulnerability scans at least quarterly and after any significant change in the network (such as new system component installations, changes in network topology, firewall rule modifications, product upgrades).",
+                    "parts": [
+                      {
+                        "id": "11.2.1",
+                        "class": "subcontrol",
+                        "prose": "Perform quarterly internal vulnerability scans. Address vulnerabilities and perform rescans to verify all “high risk” vulnerabilities are resolved in accordance with the entity’s vulnerability ranking (per Requirement 6.1). Scans must be performed by qualified personnel."
+                      },
+                      {
+                        "id": "11.2.2",
+                        "class": "subcontrol",
+                        "prose": "Perform quarterly external vulnerability scans via an Approved Scanning Vendor (ASV) approved by the Payment Card Industry Security Standards Council (PCI SSC). Perform rescans as needed, until passing scans are achieved."
+                      },
+                      {
+                        "id": "11.2.3",
+                        "class": "subcontrol",
+                        "prose": "Perform internal and external scans, and rescans as needed, after any significant change. Scans must be performed by qualified personnel."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "11.3",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "11.3",
+                    "class": "control",
+                    "prose": "Implement a methodology for penetration testing that includes the following:\n\nIs based on industry-accepted penetration testing approaches (for example, NIST SP800-115)\nIncludes coverage for the entire CDE perimeter and critical systems\nIncludes testing from both inside and outside the network\nIncludes testing to validate any segmentation and scope-reduction controls\nDefines application-layer penetration tests to include, at a minimum, the vulnerabilities listed in Requirement 6.5\nDefines network-layer penetration tests to include components that support network functions as well as operating systems\nIncludes review and consideration of threats and vulnerabilities experienced in the last 12 months\nSpecifies retention of penetration testing results and remediation activities results.",
+                    "parts": [
+                      {
+                        "id": "11.3.1",
+                        "class": "subcontrol",
+                        "prose": "Perform external penetration testing at least annually and after any significant infrastructure or application upgrade or modification (such as an operating system upgrade, a sub-network added to the environment, or a web server added to the environment)."
+                      },
+                      {
+                        "id": "11.3.2",
+                        "class": "subcontrol",
+                        "prose": "Perform internal penetration testing at least annually and after any significant infrastructure or application upgrade or modification (such as an operating system upgrade, a sub-network added to the environment, or a web server added to the environment)."
+                      },
+                      {
+                        "id": "11.3.3",
+                        "class": "subcontrol",
+                        "prose": "Exploitable vulnerabilities found during penetration testing are corrected and testing is repeated to verify the corrections."
+                      },
+                      {
+                        "id": "11.3.4",
+                        "class": "subcontrol",
+                        "prose": "If segmentation is used to isolate the CDE from other networks, perform penetration tests at least annually and after any changes to segmentation controls/methods to verify that the segmentation methods are operational and effective, and isolate all out-of-scope systems from systems in the CDE."
+                      },
+                      {
+                        "id": "11.3.4.1",
+                        "class": "subcontrol",
+                        "prose": "If segmentation is used, confirm PCI DSS scope by performing penetration testing on segmentation controls at least every six months and after any changes to segmentation controls/methods."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "11.4",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "11.4",
+                    "class": "control",
+                    "prose": "Use intrusion-detection systems and/or intrusion-prevention systems to detect and/or prevent intrusions into the network. Monitor all traffic at the perimeter of the cardholder data environment as well as at critical points in the cardholder data environment, and alert personnel to suspected compromises.\n\nKeep all intrusion-detection and prevention engines, baselines, and signatures up-to-date.\n",
+                    "parts": []
+                  }
+                ]
+              },
+              {
+                "id": "11.5",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "11.5",
+                    "class": "control",
+                    "prose": "Deploy a change-detection mechanism (for example, file-integrity monitoring tools) to alert personnel to unauthorized modification (including changes, additions, and deletions) of critical system files, configuration files, or content files; and configure the software to perform critical file comparisons at least weekly.",
+                    "parts": [
+                      {
+                        "id": "11.5.1",
+                        "class": "subcontrol",
+                        "prose": "Implement a process to respond to any alerts generated by the change-detection solution."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "11.6",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "11.6",
+                    "class": "control",
+                    "prose": "Ensure that security policies and operational procedures for security monitoring and testing are documented, in use, and known to all affected parties.",
+                    "parts": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "class": "goal",
+        "title": "Maintain an Information Security Policy",
+        "controls": [
+          {
+            "id": "12",
+            "class": "requirement",
+            "title": "Maintain a policy that addresses information security for employees and contractors",
+            "properties": [
+              {
+                "name": "label",
+                "value": "Requirement 12"
+              },
+              {
+                "name": "sort-id",
+                "value": "req-12"
+              }
+            ],
+            "controls": [
+              {
+                "id": "12.1",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "12.1",
+                    "class": "control",
+                    "prose": "Establish, publish, maintain, and disseminate a security policy.",
+                    "parts": [
+                      {
+                        "id": "12.1.1",
+                        "class": "subcontrol",
+                        "prose": "Review the security policy at least annually and update the policy when the environment changes."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "12.2",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "12.2",
+                    "class": "control",
+                    "prose": "\nImplement a risk-assessment process that:\n\nIs performed at least annually and upon significant changes to the environment (for example, acquisition, merger, relocation, etc.),\nIdentifies critical assets, threats, and vulnerabilities, and\nResults in a formal, documented analysis of risk.",
+                    "parts": []
+                  }
+                ]
+              },
+              {
+                "id": "12.3",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "12.3",
+                    "class": "control",
+                    "prose": "Develop usage policies for critical technologies and define proper use of these technologies. Ensure these usage policies require the following:",
+                    "parts": [
+                      {
+                        "id": "12.3.1",
+                        "class": "subcontrol",
+                        "prose": "Explicit approval by authorized parties."
+                      },
+                      {
+                        "id": "12.3.2",
+                        "class": "subcontrol",
+                        "prose": "Authentication for use of the technology."
+                      },
+                      {
+                        "id": "12.3.3",
+                        "class": "subcontrol",
+                        "prose": "A list of all such devices and personnel with access."
+                      },
+                      {
+                        "id": "12.3.4",
+                        "class": "subcontrol",
+                        "prose": "A method to accurately and readily determine owner, contact information, and purpose (for example, labeling, coding, and/or inventorying of devices)."
+                      },
+                      {
+                        "id": "12.3.5",
+                        "class": "subcontrol",
+                        "prose": "Acceptable uses of the technology."
+                      },
+                      {
+                        "id": "12.3.6",
+                        "class": "subcontrol",
+                        "prose": "Acceptable network locations for the technologies."
+                      },
+                      {
+                        "id": "12.3.7",
+                        "class": "subcontrol",
+                        "prose": "List of company-approved products."
+                      },
+                      {
+                        "id": "12.3.8",
+                        "class": "subcontrol",
+                        "prose": "Automatic disconnect of sessions for remote access technologies after a specific period of inactivity."
+                      },
+                      {
+                        "id": "12.3.9",
+                        "class": "subcontrol",
+                        "prose": "Activation of remote-access technologies for vendors and business partners only when needed by vendors and business partners, with immediate deactivation after use."
+                      },
+                      {
+                        "id": "12.3.10",
+                        "class": "subcontrol",
+                        "prose": "For personnel accessing cardholder data via remote-access technologies, prohibit the copying, moving, and storage of cardholder data onto local hard drives and removable electronic media, unless explicitly authorized for a defined business need.\n \nWhere there is an authorized business need, the usage policies must require the data be protected in accordance with all applicable PCI DSS Requirements.\n"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "12.4",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "12.4",
+                    "class": "control",
+                    "prose": "Ensure that the security policy and procedures clearly define information security responsibilities for all personnel.",
+                    "parts": [
+                      {
+                        "id": "12.4.1",
+                        "class": "subcontrol",
+                        "prose": "Additional requirement for service providers only: Executive management shall establish responsibility for the protection of cardholder data and a PCI DSS compliance program to include:  \n\nOverall accountability for maintaining PCI DSS compliance  \nDefining a charter for a PCI DSS compliance program and communication to executive management"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "12.5",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "12.5",
+                    "class": "control",
+                    "prose": "Assign to an individual or team the following information security management responsibilities:",
+                    "parts": [
+                      {
+                        "id": "12.5.1",
+                        "class": "subcontrol",
+                        "prose": "Establish, document, and distribute security policies and procedures."
+                      },
+                      {
+                        "id": "12.5.2",
+                        "class": "subcontrol",
+                        "prose": "Monitor and analyze security alerts and information, and distribute to appropriate personnel."
+                      },
+                      {
+                        "id": "12.5.3",
+                        "class": "subcontrol",
+                        "prose": "Establish, document, and distribute security incident response and escalation procedures to ensure timely and effective handling of all situations."
+                      },
+                      {
+                        "id": "12.5.4",
+                        "class": "subcontrol",
+                        "prose": "Administer user accounts, including additions, deletions, and modifications."
+                      },
+                      {
+                        "id": "12.5.5",
+                        "class": "subcontrol",
+                        "prose": "Monitor and control all access to data."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "12.6",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "12.6",
+                    "class": "control",
+                    "prose": "Implement a formal security awareness program to make all personnel aware of the cardholder data security policy and procedures.",
+                    "parts": [
+                      {
+                        "id": "12.6.1",
+                        "class": "subcontrol",
+                        "prose": "Educate personnel upon hire and at least annually.\n"
+                      },
+                      {
+                        "id": "12.6.2",
+                        "class": "subcontrol",
+                        "prose": "Require personnel to acknowledge at least annually that they have read and understood the security policy and procedures."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "12.7",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "12.7",
+                    "class": "control",
+                    "prose": "Screen potential personnel prior to hire to minimize the risk of attacks from internal sources. (Examples of background checks include previous employment history, criminal record, credit history, and reference checks.)",
+                    "parts": []
+                  }
+                ]
+              },
+              {
+                "id": "12.8",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "12.8",
+                    "class": "control",
+                    "prose": "Maintain and implement policies and procedures to manage service providers with whom cardholder data is shared, or that could affect the security of cardholder data, as follows:",
+                    "parts": [
+                      {
+                        "id": "12.8.1",
+                        "class": "subcontrol",
+                        "prose": "Maintain a list of service providers including a description of the service provided."
+                      },
+                      {
+                        "id": "12.8.2",
+                        "class": "subcontrol",
+                        "prose": "Maintain a written agreement that includes an acknowledgement that the service providers are responsible for the security of cardholder data the service providers possess or otherwise store, process or transmit on behalf of the customer, or to the extent that they could impact the security of the customer’s cardholder data environment."
+                      },
+                      {
+                        "id": "12.8.3",
+                        "class": "subcontrol",
+                        "prose": "Ensure there is an established process for engaging service providers including proper due diligence prior to engagement."
+                      },
+                      {
+                        "id": "12.8.4",
+                        "class": "subcontrol",
+                        "prose": "Maintain a program to monitor service providers’ PCI DSS compliance status at least annually."
+                      },
+                      {
+                        "id": "12.8.5",
+                        "class": "subcontrol",
+                        "prose": "Maintain information about which PCI DSS requirements are managed by each service provider, and which are managed by the entity."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "12.9",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "12.9",
+                    "class": "control",
+                    "prose": "Additional requirement for service providers only: Service providers acknowledge in writing to customers that they are responsible for the security of cardholder data the service provider possesses or otherwise stores, processes, or transmits on behalf of the customer, or to the extent that they could impact the security of the customer’s cardholder data environment.",
+                    "parts": []
+                  }
+                ]
+              },
+              {
+                "id": "12.10",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "12.10",
+                    "class": "control",
+                    "prose": "Implement an incident response plan. Be prepared to respond immediately to a system breach.",
+                    "parts": [
+                      {
+                        "id": "12.10.1",
+                        "class": "subcontrol",
+                        "prose": "\nCreate the incident response plan to be implemented in the event of system breach. Ensure the plan addresses the following, at a minimum:\n\nRoles, responsibilities and communication and contact strategies in the event of a compromise including notification of the payment brands, at a minimum\nSpecific incident response procedures\nBusiness recovery and continuity procedures\nData back-up processes\nAnalysis of legal requirements for reporting compromises\nCoverage and responses of all critical system components\nReference or inclusion of incident response procedures from the payment brands"
+                      },
+                      {
+                        "id": "12.10.2",
+                        "class": "subcontrol",
+                        "prose": "Review and test the plan, including all elements listed in Requirement 12.10.1, at least annually."
+                      },
+                      {
+                        "id": "12.10.3",
+                        "class": "subcontrol",
+                        "prose": "Designate specific personnel to be available on a 24/7 basis to respond to alerts."
+                      },
+                      {
+                        "id": "12.10.4",
+                        "class": "subcontrol",
+                        "prose": "Provide appropriate training to staff with security breach response responsibilities."
+                      },
+                      {
+                        "id": "12.10.5",
+                        "class": "subcontrol",
+                        "prose": "Include alerts from security monitoring systems, including but not limited to intrusion-detection, intrusion-prevention, firewalls, and file-integrity monitoring systems."
+                      },
+                      {
+                        "id": "12.10.6",
+                        "class": "subcontrol",
+                        "prose": "Develop a process to modify and evolve the incident response plan according to lessons learned and to incorporate industry developments."
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "12.11",
+                "name": "control",
+                "parts": [
+                  {
+                    "id": "12.11",
+                    "class": "control",
+                    "prose": "\nPerform reviews at least quarterly to confirm personnel are following security policies and operational procedures. Reviews must cover the following processes:\n\nDaily log reviews\nFirewall rule-set reviews\nApplying configuration standards to new systems\nResponding to security alerts\nChange management processes",
+                    "parts": [
+                      {
+                        "id": "12.11.1",
+                        "class": "subcontrol",
+                        "prose": "Maintain documentation of quarterly review process to include:\n\nDocumenting results of the reviews\nReview and sign-off of results by personnel assigned responsibility for the PCI DSS compliance program"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

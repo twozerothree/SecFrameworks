@@ -44,7 +44,7 @@
                     "parts": [
                       {
                         "id": "1.1.1",
-                        "class": "subcontrol",
+                        "name": "subcontrol",
                         "prose": "A formal process for approving and testing all network connections and changes to the firewall and router configurations."
                       },
                       {

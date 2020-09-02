@@ -2,73 +2,14 @@
   "catalog": {
     "uuid": "ab64929b-6424-4205-8088-96fbd120b419",
     "metadata": {
-      "title": "Payment Card Industry (PCI) Data Security Standard Version 3.2.1",
-      "last-modified": "2020-08-29T23:29:27.272-04:00",
-      "version": "2018-05-02",
+      "title": "Payment Card Industry Data Security Standard (PCI DSS)",
+      "version": "3.2.1",
       "oscal-version": "1.0.0-milestone3",
       "properties": [
         {
           "name": "keywords",
-          "value": "Assurance, computer security, FISMA, Privacy Act, Risk Management Framework, security controls, security requirements"
+          "value": "pci, dss"
         }
-      ],
-      "links": [
-        {
-          "href": "#16b3b234-3406-44dc-8645-7da61b6e81f1",
-          "rel": "alternate",
-          "text": "NIST publication (PDF)"
-        },
-        {
-          "href": "#fb81fb1c-165e-43a4-8264-1dfd3182b630",
-          "rel": "canonical",
-          "text": "NIST publication via DOI lookup"
-        }
-      ],
-      "roles": [
-        {
-          "id": "creator",
-          "title": "Document creator"
-        },
-        {
-          "id": "contact",
-          "title": "Contact"
-        }
-      ],
-      "parties": [
-        {
-          "uuid": "93122cb0-95bc-4fdb-8b48-85ff60f9509b",
-          "type": "organization",
-          "party-name": "Joint Task Force, Transformation Initiative",
-          "addresses": [
-            {
-              "postal-address": [
-                "National Institute of Standards and Technology",
-                "Attn: Computer Security Division",
-                "Information Technology Laboratory",
-                "100 Bureau Drive (Mail Stop 8930)"
-              ],
-              "city": "Gaithersburg",
-              "state": "MD",
-              "postal-code": "20899-8930"
-            }
-          ],
-          "email-addresses": [
-            "sec-cert@nist.gov"
-          ]
-        }
-      ],
-      "responsible-parties": {
-        "creator": {
-          "party-uuids": [
-            "c6d77a50-e52e-4399-8a57-896d4807952f"
-          ]
-        },
-        "contact": {
-          "party-uuids": [
-            "c6d77a50-e52e-4399-8a57-896d4807952f"
-          ]
-        }
-      }
     },
     "groups": [
       {

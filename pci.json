@@ -2,9 +2,9 @@
   "catalog": {
     "uuid": "ab64929b-6424-4205-8088-96fbd120b419",
     "metadata": {
-      "title": "NIST Special Publication 800-53 Revision 4: Security and Privacy Controls for Federal\n         Information Systems and Organizations",
+      "title": "Payment Card Industry (PCI) Data Security Standard Version 3.2.1",
       "last-modified": "2020-08-29T23:29:27.272-04:00",
-      "version": "2015-01-22",
+      "version": "2018-05-01",
       "oscal-version": "1.0.0-milestone3",
       "properties": [
         {
